@@ -1,0 +1,16 @@
+{
+  "name": "deals_of_india",
+  "version": "1.0.0",
+  "description": "learning purpose",
+  "main": "index.js",
+  "scripts": {
+    "test": "node test"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+      "express": "~4.15.2",
+      "body-parser": "",
+	  "json-server":  ""
+  }
+}
