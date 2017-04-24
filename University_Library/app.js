@@ -3,7 +3,7 @@ var app = express();
 var bodyParser = require('body-parser')
 app.use(bodyParser.json());
 
-app.use(express.static(__dirname + '/client'));
+app.use(express.static(__dirname + '/client/src'));
 
 app.get('/test', function(req, res){
   console.log("In method test");
