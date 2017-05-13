@@ -3,14 +3,14 @@
 Node server set up
 
 1. Install Node
-	a. $sudo apt-get install nodejs	
-	b. $sudo ln -s /usr/bin/nodejs /usr/bin/node
-	c. $sudo apt-get install npm
+a. $sudo apt-get install nodejs	
+b. $sudo ln -s /usr/bin/nodejs /usr/bin/node
+c. $sudo apt-get install npm
 
 2. Install nodemon - $sudo npm install -g nodemon
 3. Goto your project directory(University_Library)
 4. run $npm install   - it will install required packages automatically (express and json body parser)
-    OR try npm install --no-bin-links  if you get symlink error
+OR try npm install --no-bin-links  if you get symlink error
 5. run $node app.js and open browser http://localhost:8080/test 
 
 
@@ -20,9 +20,9 @@ Angular Project setup
 2. cd UCA2017/AngularProject
 3. sudo npm install --no-bin-links (if using vagrant), else -> sudo npm install
 4. Make changes in package.json for below paths (only if using using vagrant with --no-bin-links)
-	a. Under scripts: Change "concurrently" to "./node_modules/concurrently/src/main.js"
-	b. Under scripts: Change "tsc" to "./node_modules/typescript/bin/tsc"
-	c. Under scripts: Change "lite-server" to "./node_modules/lite-server/bin/lite-server"
+a. Under scripts: Change "concurrently" to "./node_modules/concurrently/src/main.js"
+b. Under scripts: Change "tsc" to "./node_modules/typescript/bin/tsc"
+c. Under scripts: Change "lite-server" to "./node_modules/lite-server/bin/lite-server"
 	
 5. npm start (Runs the start command under "scripts" in package.json)
 6. Check url: http://localhost:3000/
