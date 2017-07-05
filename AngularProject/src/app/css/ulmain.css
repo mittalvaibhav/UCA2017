@@ -1,0 +1,56 @@
+* {
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    /*color: white;*/
+}
+
+.mainbody {
+    background-color: white;
+}
+
+#mainsection {
+    background-color: white;
+}
+
+/*.home{
+    background-color: black;
+    color: white
+}*/
+
+.navbar-ui{
+    height: 60px;
+    text-align: center;
+}
+
+.navbar-header-main{
+    font-style: italic;
+}
+
+.mainsection {
+    margin: 60px;
+}
+
+.form-ui{
+    border: 1px solid white;
+    padding: 20px;
+}
+
+ol.list-books-ui li{
+    margin: 8px;
+    font-size:15px;
+}
+
+::-webkit-scrollbar {
+    width: 0px;
+    height: 2em
+}
+::-webkit-scrollbar-button {
+    background: #ccc
+}
+::-webkit-scrollbar-track-piece {
+    background: #888
+}
+::-webkit-scrollbar-thumb {
+    background: #eee
+}​

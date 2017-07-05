@@ -1,0 +1,59 @@
+<div class="col-md-12">
+    <ul class="nav nav-tabs nav-justified">
+        <li role="presentation" [ngClass]="{'active': selectedTab==1}" (click)="setSelectedTab(1, 'science')">
+            <a style="cursor: pointer;">Science</a>
+        </li>
+        <li role="presentation" [ngClass]="{'active': selectedTab==2}" (click)="setSelectedTab(2, 'technology')">
+            <a style="cursor: pointer;">Technology</a>
+        </li>
+        <li role="presentation" [ngClass]="{'active': selectedTab==3}" (click)="setSelectedTab(3, 'philosophy')">
+            <a style="cursor: pointer;">Philosophy</a>
+        </li>
+    </ul>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <datatable 
+        [booksList]="booksListFromParent"
+        (bookDetails)="selectBook($event)" >
+        </datatable>
+    </div>
+</div>
+
+<div class="row" *ngIf="showBookDetails">
+    <div class="col-md-12">
+        <h4>Selected book name is: {{selectedBookName}} and discussion in book rotates around {{selectedBookDescription}} </h4>
+    </div>
+</div>
+
+<div *ngIf="2 == 1">
+<p>Dummy text</p>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div *ngIf="selectedTab==1" class="col-md-12">
+    <datatable [booksList]="listOfScienceBooks">
+    </datatable>
+</div>-->
+
+<!--<div *ngIf="selectedTab==2" class="col-md-12">
+    <datatable [booksList]="listOfTechnologyBooks">
+    </datatable>
+</div>
+
+<div *ngIf="selectedTab==3" class="col-md-12">
+    <datatable [booksList]="listPhilosophyBooks">
+    </datatable>
+</div>-->
