@@ -1,0 +1,7 @@
+.invalid[required] {
+    border: solid 1px red;
+}
+
+.valid[required] {
+    border: green 1px red;    
+}

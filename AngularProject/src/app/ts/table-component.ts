@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter, OnChanges } from '@angular/core';
+import { Component, Input, Output, EventEmitter, OnInit, AfterViewChecked, OnChanges } from '@angular/core';
 
 @Component({
     selector: 'datatable',
@@ -35,12 +35,20 @@ import { Component, Input, Output, EventEmitter, OnChanges } from '@angular/core
     `
 })
 
-export class DataTableComponent implements OnChanges {
+export class DataTableComponent implements OnInit, OnChanges, AfterViewChecked {
 
     @Input() booksList: Array<any>;
     @Output() bookDetails: any = new EventEmitter<any>();
 
+    ngOnInit() {
+        console.log("Component Initialized");
+    }
+
+    ngAfterViewChecked() {
+        console.log("After View checked called");
+    }
     ngOnChanges() {
+        console.log("Something changed on table data");
 
     }
 

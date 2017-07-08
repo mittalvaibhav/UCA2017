@@ -1,15 +1,29 @@
 <div class="row">
-    <form class="form-horizontal form-ui">
+    <div class="col-md-12">
+        <h5> Today is {{currentDate | date:'y/M/d hh:mm a'}} </h5>
+        <h5> The class is {{"uca" | uppercase}} </h5>
+    </div>
+
+</div>
+<div class="row">
+    <form #requestBookForm="ngForm" (ngSubmit)="onSubmit(requestBookForm)" class="form-horizontal form-ui">
         <div class="form-group">
             <label class="control-label col-md-3" for="booktitle">Book name</label>
             <div class="col-md-6">
-                <input type="text" class="form-control" id="Book title">
+                <input type="text" class="form-control" id="Book title" 
+                [(ngModel)]="book.title" name="title" 
+                [ngClass]="{'invalid' : formSubmitted && !checkForValidInput(book.title), 
+                'valid' : formSubmitted && checkForValidInput()}" required>
             </div>
         </div>
         <div class="form-group">
-            <label class="control-label col-md-3" for="booktitle">Author</label>
+            <label class="control-label col-md-3" for="bookauthor">Author</label>
             <div class="col-md-6">
-                <input type="text" class="form-control" id="Book title">
+                <input type="text" class="form-control" id="Book author" 
+                [(ngModel)]="book.author" name="author" 
+                [ngClass]="{'invalid' : formSubmitted && !checkForValidInput(book.author), 
+                'valid' : formSubmitted && checkForValidInput()}"
+                required>
             </div>
         </div>
         <div class="form-group">
@@ -25,7 +39,8 @@
             </div>
         </div>
         <div class="form-group">
-            <button type="submit" class="btn btn-default" style="margin:auto;display: block;">Submit</button>
+            <button type="submit" class="btn btn-default" style="margin:auto;display: block;"
+            [disabled]="false">Submit</button>
         </div>
     </form>
 </div>

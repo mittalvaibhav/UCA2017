@@ -9,4 +9,11 @@ export class BookService {
         if (subject === "technology") return techBooks;
         if (subject === "philosophy") return philosopyBooks;
     }
+    
+    // getBooks(subject: string): Promise<Book[]> {
+    //     if (subject === "science") return Promise.resolve(scienceBooks);
+    //     if (subject === "technology") return Promise.resolve(techBooks);
+    //     if (subject === "philosophy") return Promise.resolve(philosopyBooks);
+    // }
+
 }

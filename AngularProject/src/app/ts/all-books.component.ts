@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { BookService } from './book.service'
 
 @Component({
@@ -6,9 +6,11 @@ import { BookService } from './book.service'
     templateUrl: './../html/all-books.component.html'
 })
 
-export class AllBooksComponent {
+export class AllBooksComponent implements OnInit {
 
-    constructor(private bookService: BookService) { }
+    constructor(private bookService: BookService) { 
+        this.setSelectedTab(1, "science");
+    }
 
     showBookDetails: boolean = false;
     selectedBookName: string;
@@ -16,12 +18,21 @@ export class AllBooksComponent {
     selectedBookDescription: string;
 
 
+    ngOnInit() {
+        console.log("Allbooks component initialzied");
+    }
+
     selectedTab: number = 1;
-    booksListFromParent: Array<any> = this.bookService.getBooks("science");
+    booksListFromParent: Array<any>;
 
     setSelectedTab(tab: number, subject: string) {
         this.selectedTab = tab;
+
         this.booksListFromParent = this.bookService.getBooks(subject);
+
+        // this.bookService.getBooks(subject)
+        //     .then((bookList) => this.booksListFromParent = bookList)
+        //     .catch((error) => console.log(error));
     }
 
 
