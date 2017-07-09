@@ -3,6 +3,9 @@ import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
 import { RouterModule, Routes } from '@angular/router';
+import { HttpModule } from '@angular/http';
+
+import { BookService } from './book.service';
 
 import { AppComponent }  from './app.component';
 import { NavBarComponent } from './nav-bar.component'
@@ -45,6 +48,7 @@ const appRoutes: Routes = [
   imports:      [
     BrowserModule,
     FormsModule,
+    HttpModule,
     RouterModule.forRoot(appRoutes)
     ],
   declarations: [ 
@@ -61,6 +65,8 @@ const appRoutes: Routes = [
 
     TableFocusDirective
     ],
+
+  providers: [ BookService ],
 
   bootstrap:    [ AppComponent ]
 })

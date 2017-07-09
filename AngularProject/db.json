@@ -1,0 +1,142 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "json-server",
+      "author": "typicode"
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  },
+  "scienceBooks": [
+    {
+      "title": "SBook1",
+      "author": "SAuth1",
+      "isAvailable": true,
+      "description": "Modern atomic theory"
+    },
+    {
+      "title": "SBook2",
+      "author": "SAuth2",
+      "isAvailable": false
+    },
+    {
+      "title": "SBook3",
+      "author": "SAuth3",
+      "isAvailable": true
+    },
+    {
+      "title": "SBook4",
+      "author": "SAuth4",
+      "isAvailable": true
+    }
+  ],
+  "techBooks": [
+    {
+      "title": "TBook1",
+      "author": "TAuth1",
+      "isAvailable": false
+    },
+    {
+      "title": "TBook2",
+      "author": "TAuth2",
+      "isAvailable": true
+    },
+    {
+      "title": "TBook3",
+      "author": "TAuth3",
+      "isAvailable": false
+    },
+    {
+      "title": "TBook4",
+      "author": "TAuth4",
+      "isAvailable": true
+    },
+    {
+      "title": "TBook5",
+      "author": "TAuth5",
+      "isAvailable": false
+    },
+    {
+      "title": "TBook6",
+      "author": "TAuth6",
+      "isAvailable": true
+    }
+  ],
+  "philosopyBooks": [
+    {
+      "id": 1,
+      "title": "PBook1",
+      "author": "PAuth1",
+      "isAvailable": true
+    },
+    {
+      "id": 2,
+      "title": "PBook2",
+      "author": "PAuth2",
+      "isAvailable": true
+    },
+    {
+      "id": 3,
+      "title": "PBook3",
+      "author": "PAuth3",
+      "isAvailable": true
+    },
+    {
+      "id": 4,
+      "title": "PBook4",
+      "author": "PAuth4",
+      "isAvailable": false
+    },
+    {
+      "id": 5,
+      "title": "PBook5",
+      "author": "PAuth5",
+      "isAvailable": false
+    },
+    {
+      "id": 6,
+      "title": "PBook6",
+      "author": "PAuth6",
+      "isAvailable": false
+    },
+    {
+      "id": 7,
+      "title": "PBook7",
+      "author": "PAuth7",
+      "isAvailable": false
+    },
+    {
+      "id": 8,
+      "title": "PBook8",
+      "author": "PAuth8",
+      "isAvailable": false
+    },
+    {
+      "title": "PBook9",
+      "author": "PAuth9",
+      "isAvailable": false,
+      "id": 9
+    },
+    {
+      "title": "PBook10",
+      "author": "PAuth10",
+      "isAvailable": false,
+      "id": 10
+    },
+    {
+      "title": "Phil",
+      "author": "Book",
+      "isAvailable": true,
+      "id": 11
+    }
+  ]
+}

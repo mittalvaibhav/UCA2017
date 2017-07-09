@@ -8,8 +8,8 @@ import { BookService } from './book.service'
 
 export class AllBooksComponent implements OnInit {
 
-    constructor(private bookService: BookService) { 
-        this.setSelectedTab(1, "science");
+    constructor(private bookService: BookService) {
+        this.setSelectedTab(1, "scienceBooks");
     }
 
     showBookDetails: boolean = false;
@@ -28,13 +28,12 @@ export class AllBooksComponent implements OnInit {
     setSelectedTab(tab: number, subject: string) {
         this.selectedTab = tab;
 
-        this.booksListFromParent = this.bookService.getBooks(subject);
-
-        // this.bookService.getBooks(subject)
-        //     .then((bookList) => this.booksListFromParent = bookList)
-        //     .catch((error) => console.log(error));
+        this.bookService.getBooks(subject)
+            .then(bookslist => {
+                this.booksListFromParent = bookslist
+                console.log("The books list is: " + this.booksListFromParent);
+            });
     }
-
 
     selectBook(book: any) {
         let a = 1;

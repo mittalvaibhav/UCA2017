@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from "./book";
+import { BookService } from './book.service'
 
 @Component({
     selector: 'request-book',
@@ -8,6 +9,8 @@ import { Book } from "./book";
 })
 
 export class RequestBookComponent implements OnInit {
+
+    constructor(private bookService: BookService) {}
     formSubmitted: boolean = false;
 
     ngOnInit() {
@@ -15,19 +18,25 @@ export class RequestBookComponent implements OnInit {
     }
 
     currentDate: Date;
-
     tickFunction() {
         this.currentDate = new Date();
     }
-    book = new Book();    
+    book = new Book();
+
     onSubmit(requestBookForm: any) {
         this.formSubmitted = true;
 
-        if(requestBookForm.valid) window.alert("Request submitted successfully");
+        this.book.isAvailable = true;
+        console.log("Form submitted for book: " + this.book);
+
+        this.bookService.addBooks("philosopyBooks", this.book);
+
+        if (requestBookForm.valid) window.alert("Request submitted successfully");
         console.log(requestBookForm);
+
     }
 
-    checkForValidInput(fieldValue: string): boolean {        
+    checkForValidInput(fieldValue: string): boolean {
         let isValid: boolean = !(!fieldValue);
         return isValid;
     }
